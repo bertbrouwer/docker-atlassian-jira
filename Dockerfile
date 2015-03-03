@@ -5,7 +5,7 @@ MAINTAINER Coen Hyde <coen.hyde@gmail.com>
 
 # Install Jira
 
-ENV JIRA_VERSION 6.3.4
+ENV JIRA_VERSION 6.3.5
 RUN curl -Lks http://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-${JIRA_VERSION}.tar.gz -o /root/jira.tar.gz
 RUN /usr/sbin/useradd --create-home --home-dir /opt/jira --groups atlassian --shell /bin/bash jira
 RUN tar zxf /root/jira.tar.gz --strip=1 -C /opt/jira
